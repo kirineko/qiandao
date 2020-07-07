@@ -14,8 +14,8 @@ Group=root
 WorkingDirectory=/root/qiandao
 
 # The command to start Puma
-ExecStart=/home/web/.rvm/wrappers/ruby-2.5.1/bundle exec puma -C /home/web/ruby/game/config/puma.rb
-ExecStop=/home/web/.rvm/wrappers/ruby-2.5.1/bundle exec pumactl -S /home/web/ruby/game/shared/pids/puma.state stop
+ExecStart=/usr/bin/bundle exec puma -C /root/qiandao/config/puma.rb
+ExecStop=/usr/bin/bundle exec pumactl -S /root/qiandao/shared/pids/puma.state stop
 
 TimeoutSec=15
 Restart=always
