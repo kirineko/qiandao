@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>签到结果</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="release/css/frozenui.css" />
+</head>
+
+<body>
+    
+    <section class="ui-panel ui-panel-center ui-border-tb">
+        <h2>
+            <span>签到结果</span>
+        </h2>
+    </section>
+        
+    <section class="ui-panel">
+        <div class="ui-tooltips ui-tooltips-guide">
+            <div class="ui-tooltips-cnt ui-border-b">
+                <i class="ui-icon-talk"></i>
+                签到成功
+            </div>
+        </div>
+    </section>
+
+    <section class="ui-panel">
+        <ul class="ui-list ui-list-single ui-border-tb">
+            <li class="ui-border-t">
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">学号</h4>
+                    <div class="ui-txt-info">
+                        <%= number %>
+                    </div>
+                </div>
+            </li>
+            <li class="ui-border-t">
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">姓名</h4>
+                    <div class="ui-txt-info">
+                        <%= name %>
+                    </div>
+                </div>
+            </li>
+            <li class="ui-border-t">
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">签到次数</h4>
+                    <div class="ui-txt-info">
+                        <%= count %>
+                    </div>
+                </div>
+            </li>
+            <li class="ui-border-t">
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">签到时间</h4>
+                </div>
+            </li>
+            <li>
+                <div class="ui-txt-info">
+                   
+                    <ul>
+                        <% times.each do |time| %>
+                            <li>
+                                <%= time %>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </section>
+    
+    <script src="jquery.min.js"></script>
+</body>
+
+</html>

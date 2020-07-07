@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>项目实训签到</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="release/css/frozenui.css" />
+</head>
+
+<body>
+
+    <section class="ui-panel ui-panel-center ui-border-tb">
+        <h2>
+            <span>每日签到</span>
+        </h2>
+    </section>
+        
+    <section class="ui-panel">
+        <div class="ui-tooltips ui-tooltips-guide">
+            <div class="ui-tooltips-cnt ui-border-b">
+                <i class="ui-icon-talk"></i>
+                项目实训每天签到2次
+            </div>
+        </div>
+        <div class="ui-tooltips ui-tooltips-guide">
+            <div class="ui-tooltips-cnt ui-border-b">
+                <i class="ui-icon-talk"></i>
+                签到时间:<b>11点-12点,17点-18点</b>
+            </div>
+        </div>
+    </section>
+
+    <section class="ui-panel">
+        <div class="ui-form ui-border-t">
+            <form action="/result" method="POST">
+                <div class="ui-form-item ui-border-b">
+                    <label>
+                        学号
+                    </label>
+                    <input type="text" name="number" placeholder="你的学号" required>
+                </div>
+                <div class="ui-form-item ui-border-b">
+                    <label>
+                        姓名
+                    </label>
+                    <input type="text" name="name" placeholder="你的姓名" required>
+                </div>
+                <div class="ui-btn-wrap">
+                    <button class="ui-btn-lg ui-btn-primary">
+                        提交
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="ui-panel">
+        <section class="ui-input-wrap ui-border-t">
+            <div class="ui-input ui-border-radius">
+                <input id="hnumber" type="text" name="hnumber" value="" placeholder="输入学号" required>
+            </div>
+            <button id="history" class="ui-btn">查看签到历史</button>
+        </section>
+    </section>
+
+    <section class="ui-panel">
+        <ul id="result" class="ui-list ui-list-single ui-border-tb">
+        </ul>
+    </section>
+    <script src="jquery.min.js"></script>
+    <script src="main.js">
+    </script>
+</body>
+
+</html>
