@@ -9,7 +9,7 @@ configure { set :server, :puma }
 class App < Sinatra::Base
   # @return [Redis]
   def redis
-    $redis ||= Redis.new({ password: 'kirinekoneko' })
+    $redis ||= Redis.new({ password: '' })
   end
 
   get '/' do
