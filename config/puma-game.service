@@ -7,11 +7,11 @@ After=network.target
 Type=simple
 
 # Preferably configure a non-privileged user
-User=web
-Group=web
+User=root
+Group=root
 
 # Specify the path to your puma application root
-WorkingDirectory=/home/web/ruby/game
+WorkingDirectory=/root/qiandao
 
 # The command to start Puma
 ExecStart=/home/web/.rvm/wrappers/ruby-2.5.1/bundle exec puma -C /home/web/ruby/game/config/puma.rb
